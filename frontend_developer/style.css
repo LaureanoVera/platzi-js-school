@@ -1,0 +1,25 @@
+* {
+  transition: .2s;
+  color: white;
+}
+
+body {
+  background-color: black;
+}
+
+h1:hover {
+  color: lightblue;
+}
+h1::first-letter {
+  color: aqua;
+}
+h1::before {
+  content: "<-";
+}
+h1::after {
+  content: "->";
+}
+
+h3[class="type"] {
+  color: cyan;
+}
