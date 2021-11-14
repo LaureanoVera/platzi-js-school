@@ -8,7 +8,7 @@
 
   /* fonts */
   --family:'Quicksand', sans-serif;
-  --sm: 14px;
+  --sm: 12px;
   --md: 16px;
   --lg: 18px;
 }
@@ -19,20 +19,23 @@ body {
 }
 
 /* LOGIN PAGE */
-.login {
+.login,
+.email {
   height: 100vh;
-  width: 100%;
   display: grid;
   place-items: center;
 }
 
-.login__form-container {
+.login__form-container,
+.email__form-container {
   display: grid;
   grid-template-rows: auto 1fr auto;
   width: 300px;
+  justify-items: center;
 }
 
-.login__logo {
+.login__logo,
+.email__logo {
   width: 150px;
   /* margin: 0 auto 48px; */
   justify-self: center;
@@ -40,13 +43,15 @@ body {
   display: none;
 }
 
-.login__title {
+.login__title,
+.email__title {
   font-size: var(--lg);
   margin-bottom: 12px;
   text-align: center;
 }
 
-.login__subtitle {
+.login__subtitle,
+.email__subtitle {
   color: var(--very-light-pink);
   font-size: var(--md);
   font-weight: 300;
@@ -82,11 +87,43 @@ body {
 }
 
 @media (max-width: 640px) {
-  .login__logo {
+  .login__logo,
+  .email__logo {
     display: block;
   }
 }
 /* /LOGIN PAGE */
+
+/* EMAIL PAGE */
+.email__image {
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  background-color: var(--text-input-field);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 0 auto 20px; */
+  margin-bottom: 24px;
+}
+
+.email__image img {
+  width: 80px;
+}
+
+.email__resend {
+  font-size: var(--sm);
+}
+
+.email__resend span {
+  color: var(--very-light-pink);
+}
+
+.email__resend a {
+  color: var(--hospital-green);
+  text-decoration: none;
+}
+/* /EMAIL PAGE */
 
 /* GENERAL */
 .primary-btn {
