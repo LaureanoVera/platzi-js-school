@@ -20,14 +20,16 @@ body {
 
 /* LOGIN PAGE */
 .login,
-.email {
+.email,
+.account {
   height: 100vh;
   display: grid;
   place-items: center;
 }
 
 .login__form-container,
-.email__form-container {
+.email__form-container,
+.account__form-container {
   display: grid;
   grid-template-rows: auto 1fr auto;
   width: 300px;
@@ -44,7 +46,8 @@ body {
 }
 
 .login__title,
-.email__title {
+.email__title,
+.account__title {
   font-size: var(--lg);
   margin-bottom: 12px;
   text-align: center;
@@ -60,18 +63,21 @@ body {
   text-align: center;
 }
 
-.login__form {
+.login__form,
+.account__form {
   display: flex;
   flex-direction: column;
 }
 
-.login__label {
+.login__label,
+.account__label {
   font-size: var(--sm);
   font-weight: bold;
   margin-bottom: 4px;
 }
 
-.login__input {
+.login__input,
+.account__input {
   background-color: var(--text-input-field);
   border: none;
   border-radius: 8px;
