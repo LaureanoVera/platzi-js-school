@@ -1,13 +1,13 @@
 :root {
   /* colors */
-  --very-light-pink:#c7c7c7;
-  --text-input-field:#f7f7f7;
-  --hospital-green:#acd9b2;
-  --black:#000000;
-  --white:#ffffff;
+  --very-light-pink: #c7c7c7;
+  --text-input-field: #f7f7f7;
+  --hospital-green: #acd9b2;
+  --black: #000000;
+  --white: #ffffff;
 
   /* fonts */
-  --family:'Quicksand', sans-serif;
+  --family: "Quicksand", sans-serif;
   --sm: 12px;
   --md: 16px;
   --lg: 18px;
@@ -49,8 +49,8 @@ body {
 .email__title,
 .account__title {
   font-size: var(--lg);
-  margin-bottom: 12px;
-  text-align: center;
+  margin-bottom: 36px;
+  text-align: start;
 }
 
 .login__subtitle,
@@ -69,6 +69,12 @@ body {
   flex-direction: column;
 }
 
+.login__form div,
+.account__form div {
+  display: flex;
+  flex-direction: column;
+}
+
 .login__label,
 .account__label {
   font-size: var(--sm);
@@ -82,9 +88,10 @@ body {
   border: none;
   border-radius: 8px;
   height: 30px;
-  font-size: var(--md);
+  font-size: var(--sm);
   padding: 4px;
   margin-bottom: 12px;
+  width: 100%;
 }
 
 .login__send {
@@ -96,6 +103,18 @@ body {
   .login__logo,
   .email__logo {
     display: block;
+  }
+
+  .login__form-container,
+  .email__form-container,
+  .account__form-container {
+    height: 100%;
+  }
+
+  .login__form,
+  .account__form {
+    height: 100%;
+    justify-content: space-between;
   }
 }
 /* /LOGIN PAGE */
@@ -136,6 +155,7 @@ body {
   background-color: var(--hospital-green);
   border-radius: 8px;
   border: none;
+  margin-bottom: 24px;
   color: var(--white);
   height: 30px;
   width: 100%;

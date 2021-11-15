@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Account</title>
     <!-- SYLES -->
-    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/style.css" />
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,15 +18,41 @@
   <body>
     <div class="account">
       <div class="account__form-container">
-        <h1 class="account__title">Create a new password</h1>
+        <h1 class="account__title">My Account</h1>
         <form action="/" class="account__form">
-          <label for="name" class="account__label">Name</label>
-          <input type="text" name="name" id="name" placeholder="Moeru" class="input account__input">
-          <label for="email" class="account__label">Email</label>
-          <input type="email" name="email" id="email" placeholder="hello@example.com" class="input account__input">
-          <label for="password" class="account__label">Password</label>
-          <input type="password" name="password" id="password" placeholder="*********" class="input account__input">
-          <input type="submit" value="Create" class="primary-btn account__send">
+          <div >
+            <label for="name" class="account__label">Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Moeru"
+              class="input account__input"
+            />
+            <!-- ----- -->
+            <label for="email" class="account__label">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="hello@example.com"
+              class="input account__input"
+            />
+            <!-- ----- -->
+            <label for="password" class="account__label">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="*********"
+              class="input account__input"
+            />
+          </div>
+          <input
+            type="submit"
+            value="Create"
+            class="primary-btn account__send"
+          />
         </form>
       </div>
     </div>
