@@ -150,6 +150,14 @@ body {
 }
 /* /EMAIL PAGE */
 
+/* EDIT ACCOUNT PAGE */
+.value {
+  color: var(--very-light-pink);
+  font-size: var(--md);
+  margin: 8px 0 32px 0;
+}
+/* /EDIT ACCOUNT PAGE */
+
 /* GENERAL */
 .primary-btn {
   background-color: var(--hospital-green);
@@ -157,6 +165,19 @@ body {
   border: none;
   margin-bottom: 24px;
   color: var(--white);
+  height: 30px;
+  width: 100%;
+  cursor: pointer;
+  font-size: var(--md);
+  font-weight: bold;
+}
+
+.secondary-btn {
+  background-color: var(--white);
+  border-radius: 8px;
+  border: 1px solid var(--hospital-green);
+  margin-bottom: 24px;
+  color: var(--hospital-green);
   height: 30px;
   width: 100%;
   cursor: pointer;
