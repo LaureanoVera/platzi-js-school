@@ -39,3 +39,9 @@ let person = {
 console.log(person);
 let { name } = person
 console.log(name);
+
+// SPREAD OPERATOR
+let team1 = ['Laureano', 'Ivan', 'Gerardo']
+let team2 = ['Shikamaru', 'Batman', 'Baki']
+let tournament = ['Vegeta', ...team2, 'Joker','Spider-Man', ...team1]
+console.log(tournament);
