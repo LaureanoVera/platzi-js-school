@@ -62,3 +62,32 @@ console.log(globalVar);
 
 const a = "a";
 // a = "b"; <== ERROR
+
+// PARAMETRPOS EN OBJETOS
+let user = 'User00202'
+let pass = 123123123123123
+let obj = {user: user, pass:pass}
+console.log(obj);
+let obj2 = {user, pass}
+console.log(obj2);
+
+const names = [
+  {name: 'Laureano', age: 18},
+  {name: 'Ivan', age: 19},
+  {name: 'Gerardo', age: 20}
+]
+
+// ARROW FUNCTIONS
+let listOfNames = names.map(function(el) {
+  return el.name;
+})
+console.log(listOfNames);
+
+let listOfNames2 = names.map(el => el.name)
+console.log(listOfNames2);
+
+const listOfNames3 = (name) => {
+  console.log(name);
+}
+
+const listOfNames3 = name => console.log(name);
