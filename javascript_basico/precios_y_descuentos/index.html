@@ -10,6 +10,17 @@
   </head>
   <body>
     <h1>Porcentajes y Descuentos</h1>
+    <p>Este es el segundo taller del curso Practico de JavaScript</p>
+    <form>
+      <label for="price">Escribe el precio de tu producto</label>
+      <input id="price" placeholder="$" type="number" />
+      <br />
+      <label for="discount">Escribe el descuento de tu producto</label>
+      <input id="discount" placeholder="%" type="number" />
+      <br />
+      <button type="button" onclick="handlePriceDiscount()">Calcular</button>
+      <p>$ <span id="resultPrice"></span></p>
+    </form>
     <!-- SCRIPT -->
     <script src="./js/app.js"></script>
   </body>
