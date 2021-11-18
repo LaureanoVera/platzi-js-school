@@ -29,3 +29,13 @@ console.log(lorem);
 let lorem2 = `Texto verdaderamente epico en multilinea
 igual pero diferente.`
 console.log(lorem2);
+
+// DESESTRUCTURACION
+let person = {
+  "name":"Laureano",
+  "age":18,
+  "country":"ARG"
+}
+console.log(person);
+let { name } = person
+console.log(name);
