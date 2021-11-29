@@ -32,5 +32,5 @@ async function cachedResponse(request) {
 async function updateCache(request) {
   const cache = await caches.open(VERSION)
   const response = await fetch(request)
-  cache.put(request, response)
+  return cache.put(request, response)
 }
