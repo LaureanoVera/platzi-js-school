@@ -1,4 +1,5 @@
 const express = require('express')
+const faker = require('faker')
 const app = express()
 const PORT = 3000;
 
@@ -12,20 +13,22 @@ app.get('/newRoute', (req,res) => {
 })
 
 app.get('/products', (req,res) => {
-  res.json([
-    {
-      name: 'ProductOne',
-      price: 10
-    },
-    {
-      name: 'ProductTwo',
-      price: 20
-    },
-    {
-      name: 'ProductThree',
-      price: 30
-    }
-  ])
+  const products = []
+  const { size } = req.query
+  const limit = size || 10
+
+  for (let i = 0; i < limit; i++) {
+    products.push({
+      name: faker.commerce.productName(),
+      price: Number(faker.commerce.price()),
+      image: faker.image.sports
+    })
+  }
+  res.json(products)
+})
+
+app.get('/products/filter',(req,res) => {
+  res.send("I'm filter")
 })
 
 app.get('/products/:id',(req,res) => {
@@ -35,6 +38,17 @@ app.get('/products/:id',(req,res) => {
     name: 'ProductThree',
     price: 30
   })
+})
+
+app.get('/users', (req, res) => {
+  const { limit, offset } = req.query
+  if (limit && offset) {
+    res.json({
+      limit,
+      offset
+    })
+  }
+  res.send('No hay parametros')
 })
 
 app.get('/categories/:categoryId/products/:productId', (req, res) => {
