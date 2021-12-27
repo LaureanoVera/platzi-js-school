@@ -1,1 +1,11 @@
-console.log('LauApp');
+const express = require('express')
+const app = express()
+const PORT = 3000;
+
+app.get('/', (req,res) => {
+  res.send('Your first server')
+})
+
+app.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}`);
+})
