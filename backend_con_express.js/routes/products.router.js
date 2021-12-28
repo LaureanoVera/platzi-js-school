@@ -11,7 +11,7 @@ router.get('/', (req,res) => {
     products.push({
       name: faker.commerce.productName(),
       price: Number(faker.commerce.price()),
-      image: faker.image.sports
+      image: faker.image.sports()
     })
   }
   res.json(products)
@@ -27,6 +27,14 @@ router.get('/:id',(req,res) => {
     id,
     name: 'ProductThree',
     price: 30
+  })
+})
+
+router.post('/', (req,res) => {
+  const body = req.body
+  res.json({
+    message: 'created',
+    data: body
   })
 })
 
