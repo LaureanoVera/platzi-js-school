@@ -1,17 +1,20 @@
 function logErrors (err, req, res, next) {
-  console.time('logErrors')
   console.error(err);
   next(err);
-  console.timeEnd('logErrors')
 }
 
 function errorHandler (err, req, res, next) {
-  console.time('errorHandler')
   res.status(500).json({
     message: err.message,
     stack: err.stack
   })
-  console.timeEnd('errorHandler')
 }
 
-module.exports = { logErrors, errorHandler }
+function boomErrorHandler  (err, req, res, next) {
+  if (err.isBoom) {
+    const { output } = err
+    res.status(output.statusCode).json(output.payload)
+  }
+  next(err)
+}
+module.exports = { logErrors, errorHandler, boomErrorHandler }

@@ -1,5 +1,5 @@
 {
-  "name": "backend_con_express",
+  "name": "backend_con_node",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,18 +9,13 @@
     "lint": "eslint"
   },
   "keywords": [],
-  "author": "LaureanoVera",
+  "author": "LaureanoVera <laureanoigvera@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^8.5.0",
+    "eslint": "^8.7.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "nodemon": "^2.0.15",
     "prettier": "^2.5.1"
-  },
-  "dependencies": {
-    "@hapi/boom": "^9.1.4",
-    "express": "^4.17.2",
-    "faker": "^5.5.3"
   }
 }
